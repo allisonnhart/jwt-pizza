@@ -44,6 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       version: ${{needs.build.outputs.version}}
+    environment:
       name: staging
       url: https://stage-pizza.allisonnhart.com
     steps:
