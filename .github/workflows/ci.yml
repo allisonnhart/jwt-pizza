@@ -44,6 +44,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       version: ${{needs.build.outputs.version}}
+      name: staging
+      url: https://stage-pizza.allisonnhart.com
     steps:
       - name: Create OIDC token to AWS
         uses: aws-actions/configure-aws-credentials@v4
